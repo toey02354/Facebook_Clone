@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Navbar.module.css";
+import Image from "next/image";
 import Link from "next/link";
 import { Box, Typography } from "@mui/material";
 import {
@@ -57,16 +58,21 @@ const Navbar = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: "#4f4f4f",
             borderRadius: "1rem",
             gap: "0.5rem",
             fontSize: "1.5rem",
-            padding: "0.5rem 1rem",
+            padding: "0.25rem 0.5rem",
             cursor: "pointer",
             "&:hover": { backgroundColor: "#5c5c5c" },
           }}
         >
-          <People /> <Typography>Natthaphol</Typography>
+          <Image
+            src="/profilepic.jpg"
+            width="32px"
+            height="32px"
+            style={{ borderRadius: "50%" }}
+          />
+          <Typography>Natthaphol</Typography>
         </Box>
         <Add sx={IconOutlinedStyle} />
         <Chat sx={IconOutlinedStyle} />

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./LeftSideBar.module.css";
+import Image from "next/image";
 import {
   People,
   GroupWork,
@@ -18,7 +19,14 @@ import {
 
 const group1Items = [
   {
-    icon: <People sx={{ color: "white" }} />,
+    icon: (
+      <Image
+        src="/profilepic.jpg"
+        width="32px"
+        height="32px"
+        style={{ borderRadius: "50%" }}
+      />
+    ),
     text: "Natthaphol Uthum",
   },
   {
