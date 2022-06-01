@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <title>Facebook Clone</title>
         <meta
           name="description"
           content="A Facebook Clone by Natthaphol Uthumphirat"

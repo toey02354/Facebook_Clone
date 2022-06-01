@@ -9,3 +9,24 @@
   padding: 0.75rem;
   border-bottom: 2px solid #494949;
 }
+.group1 {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.group2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.group3 {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  gap: 0.5rem;
+}
