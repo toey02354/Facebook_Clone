@@ -13,7 +13,7 @@
   width: 25vw;
   display: flex;
   flex-direction: row;
-  justify-items: center;
+  justify-items: flex-start;
   align-items: center;
   gap: 0.5rem;
 }
@@ -29,7 +29,7 @@
   width: 25vw;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   gap: 0.5rem;
 }

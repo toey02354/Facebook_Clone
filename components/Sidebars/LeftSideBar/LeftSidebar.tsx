@@ -69,8 +69,9 @@ const LeftSidebar = () => {
   return (
     <div className={styles.container}>
       <List sx={{ width: "100%", bgcolor: "#1c1e21" }}>
-        {group1Items.map((item) => (
+        {group1Items.map((item, index) => (
           <ListItemButton
+            key={`${item.text} ${index}`}
             sx={{
               borderRadius: "1rem",
               "&:hover": { backgroundColor: "#5c5c5c" },
@@ -90,8 +91,9 @@ const LeftSidebar = () => {
           </ListSubheader>
         }
       >
-        {group2Items.map((item) => (
+        {group2Items.map((item, index) => (
           <ListItemButton
+            key={`${item.text} ${index}`}
             sx={{
               borderRadius: "1rem",
               "&:hover": { backgroundColor: "#5c5c5c" },
