@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 .content {
-  min-height: 92vh;
+  min-height: calc(100vh- (3.5rem));
   display: flex;
   flex-direction: row;
 }
