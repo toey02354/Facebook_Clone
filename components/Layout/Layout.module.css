@@ -1,0 +1,9 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  min-height: 92vh;
+  display: flex;
+  flex-direction: row;
+}
