@@ -1,8 +1,6 @@
 import React from "react";
-import styles from "./Navbar.module.css";
-import Image from "next/image";
 import Link from "next/link";
-import { Box, Typography, Grid } from "@mui/material";
+import { Avatar } from "@mui/material";
 import {
   FacebookRounded,
   Search,
@@ -14,86 +12,41 @@ import {
   Chat,
   Notifications,
   ArrowDropDown,
-  People,
 } from "@mui/icons-material";
-
-const IconStyle = {
-  cursor: "pointer",
-  fontSize: "3rem",
-  padding: "0.5rem",
-  borderRadius: "1rem",
-  width: "5vw",
-  "&:hover": { backgroundColor: "#525252" },
-};
-
-const IconOutlinedStyle = {
-  backgroundColor: "#4f4f4f",
-  borderRadius: "50%",
-  fontSize: "2.5rem",
-  padding: "0.5rem",
-  cursor: "pointer",
-  "&:hover": { backgroundColor: "#5c5c5c" },
-};
 
 const Navbar = () => {
   return (
-    <Grid container padding="0.75rem" border="2px solid #494949">
-      <Grid
-        item
-        xs={3}
-        display="flex"
-        direction="row"
-        justifyContent="flex-start"
-        gap="8px"
-      >
+    <div className="grid grid-cols-12 p-3 bg-[#252627] border-b-2 border-b-gray-700">
+      <div className="col-span-3 flex justify-start gap-2">
         <Link href="/">
           <FacebookRounded
-            sx={{ cursor: "pointer", color: "#4267B2", fontSize: "2.5rem" }}
+            key="FBLogo"
+            className="cursor-pointer text-[#4267B2] text-[2.75rem]"
           />
         </Link>
-        <Search sx={IconOutlinedStyle} />
-      </Grid>
-      <Grid item xs={6} display="flex" direction="row" justifyContent="center">
-        <Home sx={IconStyle} />
-        <LiveTv sx={IconStyle} />
-        <Storefront sx={IconStyle} />
-        <Gamepad sx={IconStyle} />
-      </Grid>
-      <Grid
-        item
-        display="flex"
-        direction="row"
-        justifyContent="flex-end"
-        gap="8px"
-        xs={3}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            borderRadius: "1rem",
-            gap: "0.5rem",
-            fontSize: "1.5rem",
-            padding: "0.25rem 0.5rem",
-            cursor: "pointer",
-            "&:hover": { backgroundColor: "#5c5c5c" },
-          }}
-        >
-          <Image
+        <Search key="Search" className="OUTLINED-ICONS" />
+      </div>
+      <div className="col-span-6 flex justify-center">
+        <Home key="Home" className="MIDDLE-ICONS MIDDLE-ICONS-ACTIVE" />
+        <LiveTv key="TV" className="MIDDLE-ICONS" />
+        <Storefront key="Store" className="MIDDLE-ICONS" />
+        <Gamepad key="Game" className="MIDDLE-ICONS" />
+      </div>
+      <div className="col-span-3 flex justify-end gap-2">
+        <div className="flex justify-center items-center rounded-[1rem] gap-2 text-[1.5rem] py-[0.25rem] px-[0.5rem] cursor-pointer hover:bg-[#5c5c5c]">
+          <Avatar
+            className="h-[2rem] w-[2rem]"
             src="/profilepic.jpg"
-            width="32px"
-            height="32px"
-            style={{ borderRadius: "50%" }}
+            alt="profilepic"
           />
-          <Typography>Natthaphol</Typography>
-        </Box>
-        <Add sx={IconOutlinedStyle} />
-        <Chat sx={IconOutlinedStyle} />
-        <Notifications sx={IconOutlinedStyle} />
-        <ArrowDropDown sx={IconOutlinedStyle} />
-      </Grid>
-    </Grid>
+          <div className="text-[1rem] font-[500]">Natthaphol</div>
+        </div>
+        <Add key="Add" className="OUTLINED-ICONS" />
+        <Chat key="Chat" className="OUTLINED-ICONS" />
+        <Notifications key="Notify" className="OUTLINED-ICONS" />
+        <ArrowDropDown key="ArrDown" className="OUTLINED-ICONS" />
+      </div>
+    </div>
   );
 };
 

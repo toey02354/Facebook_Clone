@@ -1,7 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
@@ -9,7 +7,12 @@ const Home: NextPage = () => {
       <Head>
         <title>Facebook Clone</title>
       </Head>
-      <div className={styles.container}>
+      <div className="flex flex-col justify-start items-start p-[1rem] gap-4">
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam
+          vel nobis iure ex libero sunt et impedit! Voluptatibus, molestias
+          tenetur?
+        </div>
         <div>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam
           vel nobis iure ex libero sunt et impedit! Voluptatibus, molestias

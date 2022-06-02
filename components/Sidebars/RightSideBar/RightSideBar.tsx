@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./RightSideBar.module.css";
 import {
   Divider,
   List,
@@ -11,29 +10,29 @@ import {
 
 const RightSideBar = () => {
   return (
-    <div className={styles.container}>
+    <div className="w-[75%] flex flex-col justify-start p-4">
       <List
-        sx={{ width: "100%", bgcolor: "#1c1e21" }}
+        className="w-full bg-[#1c1e21]"
         subheader={
-          <ListSubheader sx={{ bgcolor: "#1c1e21", color: "white" }}>
+          <ListSubheader className="bg-inherit text-white">
             ไม่ได้รับการสนับสนุน
           </ListSubheader>
         }
       ></List>
-      <Divider sx={{ backgroundColor: "#5c5c5c" }} />
+      <Divider className="bg-[#5c5c5c]" />
       <List
-        sx={{ width: "100%", bgcolor: "#1c1e21" }}
+        className="w-full bg-[#1c1e21]"
         subheader={
-          <ListSubheader sx={{ bgcolor: "#1c1e21", color: "white" }}>
+          <ListSubheader className="bg-inherit text-white">
             วันเกิด
           </ListSubheader>
         }
       ></List>
-      <Divider sx={{ backgroundColor: "#5c5c5c" }} />
+      <Divider className="bg-[#5c5c5c]" />
       <List
-        sx={{ width: "100%", bgcolor: "#1c1e21" }}
+        className="w-full bg-[#1c1e21]"
         subheader={
-          <ListSubheader sx={{ bgcolor: "#1c1e21", color: "white" }}>
+          <ListSubheader className="bg-inherit text-white">
             ผู้ติดต่อ
           </ListSubheader>
         }

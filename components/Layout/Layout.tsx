@@ -1,6 +1,4 @@
 import React from "react";
-import styles from "./Layout.module.css";
-import { Container, Box, Grid } from "@mui/material";
 
 // Components
 import Navbar from "../Navbar";
@@ -8,24 +6,17 @@ import { RightSideBar, LeftSideBar } from "../Sidebars";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className={styles.layout}>
+    <div className="flex flex-col">
       <Navbar />
-      {/* <div className={styles.content}>
-        <LeftSideBar />
-        {children}
-        <RightSideBar />
-      </div> */}
-      <Grid container>
-        <Grid item xs={3} display="flex" justifyContent="flex-start">
+      <div className="grid grid-cols-12">
+        <div className="col-span-3 flex justify-start">
           <LeftSideBar />
-        </Grid>
-        <Grid item xs={6} display="flex" justifyContent="center">
-          {children}
-        </Grid>
-        <Grid item xs={3} display="flex" justifyContent="flex-end">
+        </div>
+        <div className="col-span-6 flex justify-center">{children}</div>
+        <div className="col-span-3 flex justify-end">
           <RightSideBar />
-        </Grid>
-      </Grid>
+        </div>
+      </div>
     </div>
   );
 };
