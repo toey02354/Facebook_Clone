@@ -23,12 +23,12 @@ a {
 
 @layer {
   .MIDDLE-ICONS {
-    @apply w-[5vw] cursor-pointer text-[3rem] p-2 rounded-[1rem] hover:bg-[#5c5c5c];
+    @apply w-[7vw] cursor-pointer text-[3rem] p-2 rounded-[1rem] hover:bg-[#5c5c5c];
   }
   .OUTLINED-ICONS {
     @apply bg-[#4f4f4f] rounded-full text-[2.5rem] p-2 cursor-pointer hover:bg-[#5c5c5c];
   }
   .MIDDLE-ICONS-ACTIVE {
-    @apply border-b-4 border-b-[#4267B2] rounded-none text-[#4267B2] hover:bg-transparent;
+    @apply border-b-4 border-b-[#4267B2] p-1 rounded-none text-[#4267B2] hover:bg-transparent;
   }
 }

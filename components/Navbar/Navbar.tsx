@@ -16,7 +16,7 @@ import {
 
 const Navbar = () => {
   return (
-    <div className="grid grid-cols-12 p-3 bg-[#252627] border-b-2 border-b-gray-700">
+    <div className="grid grid-cols-12 justify-center items-center p-3 bg-[#252627] border-b-2 border-b-gray-700">
       <div className="col-span-3 flex justify-start gap-2">
         <Link href="/">
           <FacebookRounded
@@ -24,7 +24,13 @@ const Navbar = () => {
             className="cursor-pointer text-[#4267B2] text-[2.75rem]"
           />
         </Link>
-        <Search key="Search" className="OUTLINED-ICONS" />
+        <div className="flex justify-center items-center px-4 bg-[#4f4f4f] rounded-[2rem] gap-2">
+          <Search key="Search" />
+          <input
+            placeholder="ค้นหาบน Facebook"
+            className="bg-inherit focus:outline-none"
+          ></input>
+        </div>
       </div>
       <div className="col-span-6 flex justify-center">
         <Home key="Home" className="MIDDLE-ICONS MIDDLE-ICONS-ACTIVE" />
