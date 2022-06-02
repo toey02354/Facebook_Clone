@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 import {
   FacebookRounded,
   Search,
@@ -37,22 +37,36 @@ const IconOutlinedStyle = {
 
 const Navbar = () => {
   return (
-    <div className={styles.navBarContainer}>
-      <div className={styles.group1}>
+    <Grid container padding="0.75rem" border="2px solid #494949">
+      <Grid
+        item
+        xs={3}
+        display="flex"
+        direction="row"
+        justifyContent="flex-start"
+        gap="8px"
+      >
         <Link href="/">
           <FacebookRounded
             sx={{ cursor: "pointer", color: "#4267B2", fontSize: "2.5rem" }}
           />
         </Link>
         <Search sx={IconOutlinedStyle} />
-      </div>
-      <div className={styles.group2}>
+      </Grid>
+      <Grid item xs={6} display="flex" direction="row" justifyContent="center">
         <Home sx={IconStyle} />
         <LiveTv sx={IconStyle} />
         <Storefront sx={IconStyle} />
         <Gamepad sx={IconStyle} />
-      </div>
-      <div className={styles.group3}>
+      </Grid>
+      <Grid
+        item
+        display="flex"
+        direction="row"
+        justifyContent="flex-end"
+        gap="8px"
+        xs={3}
+      >
         <Box
           sx={{
             display: "flex",
@@ -78,8 +92,8 @@ const Navbar = () => {
         <Chat sx={IconOutlinedStyle} />
         <Notifications sx={IconOutlinedStyle} />
         <ArrowDropDown sx={IconOutlinedStyle} />
-      </div>
-    </div>
+      </Grid>
+    </Grid>
   );
 };
 
