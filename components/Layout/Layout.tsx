@@ -9,11 +9,13 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <div className="flex flex-col">
       <Navbar />
       <div className="grid grid-cols-12">
-        <div className="col-span-3 flex justify-start">
+        <div className="col-span-3 hidden lg:flex justify-start">
           <LeftSideBar />
         </div>
-        <div className="col-span-6 flex justify-center">{children}</div>
-        <div className="col-span-3 flex justify-end">
+        <div className="col-span-12 lg:col-span-6 flex justify-center">
+          {children}
+        </div>
+        <div className="col-span-3 hidden lg:flex justify-end">
           <RightSideBar />
         </div>
       </div>

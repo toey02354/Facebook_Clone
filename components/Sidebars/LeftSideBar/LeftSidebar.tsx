@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import {
   People,
   GroupWork,
@@ -13,12 +14,20 @@ import {
   ListItemIcon,
   ListItemText,
   Divider,
-  Avatar,
 } from "@mui/material";
 
 const group1Items = [
   {
-    icon: <Avatar src="/profilepic.jpg" className="h-[2rem] w-[2rem]" />,
+    icon: (
+      <Image
+        width={32}
+        height={32}
+        src="/profilepic.jpg"
+        alt="profilepic"
+        layout="fixed"
+        className="rounded-full"
+      />
+    ),
     text: "Natthaphol Uthum",
   },
   {
@@ -75,7 +84,7 @@ const LeftSidebar = () => {
       <List
         className="w-full bg-[#1c1e21]"
         subheader={
-          <ListSubheader className="bg-inherit text-white">
+          <ListSubheader className="bg-inherit text-white static">
             ทางลัดของคุณ
           </ListSubheader>
         }
