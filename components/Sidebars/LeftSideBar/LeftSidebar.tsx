@@ -28,7 +28,7 @@ const group1Items = [
         className="rounded-full"
       />
     ),
-    text: "Natthaphol Uthum",
+    text: "Natthaphol Uthumphirat",
   },
   {
     icon: <People />,
@@ -84,7 +84,7 @@ const LeftSidebar = () => {
       <List
         className="w-full bg-[#1c1e21]"
         subheader={
-          <ListSubheader className="bg-inherit text-white static">
+          <ListSubheader className="bg-inherit text-white static font-bold">
             ทางลัดของคุณ
           </ListSubheader>
         }

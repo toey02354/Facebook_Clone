@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         <title>Facebook Clone</title>
       </Head>
       {/* Story */}
-      <div className="h-[200vh] max-w-[50vw] flex flex-col justify-start items-start p-[1rem] gap-4">
+      <div className="h-[200vh] w-[80vw] lg:w-[50vw] flex flex-col justify-start items-start p-[1rem] gap-4">
         <div className="grid grid-cols-5 gap-4">
           <div className="col-span-1">
             <Image
@@ -73,7 +73,7 @@ const Home: NextPage = () => {
             <input
               type="text"
               name="Create a post"
-              placeholder="คุณกำลังคิดอะไรอยู๋"
+              placeholder="คุณกำลังคิดอะไรอยู่"
               className="w-full bg-[#4f4f4f] ml-4 py-2 px-4 outline-none rounded-2xl placeholder:text-white"
             />
           </div>
@@ -141,7 +141,7 @@ const Home: NextPage = () => {
               </h6>
             </div>
           </div>
-          <p>ความตัวละ 16 ล้าน</p>
+          <p>ฝนตก</p>
           <Image
             src="/post1pic.jpg"
             height={600}
