@@ -149,6 +149,30 @@ const Home: NextPage = () => {
             layout="responsive"
           />
         </div>
+        <div className="w-full flex flex-col justify-start p-4 gap-4 bg-[#252627] rounded-2xl">
+          <div className="flex flex-row gap-2">
+            <Image
+              src="/profilepic.jpg"
+              height={40}
+              width={40}
+              className="rounded-full"
+              layout="fixed"
+            />
+            <div className="flex flex-col">
+              <h4>Natthaphol Uthumphirat</h4>
+              <h6 className="text-xs">
+                3 ชม. <PublicIcon className="text-xs" />
+              </h6>
+            </div>
+          </div>
+          <p>ฝนตก</p>
+          <Image
+            src="/post1pic.jpg"
+            height={600}
+            width={900}
+            layout="responsive"
+          />
+        </div>
       </div>
     </>
   );

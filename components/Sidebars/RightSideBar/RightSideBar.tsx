@@ -19,6 +19,8 @@ import {
   ArrowDropUp,
 } from "@mui/icons-material";
 
+import ContactList from "./ContactList";
+
 const RightSideBar = () => {
   const [open, setOpen] = React.useState<boolean>(false);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -70,28 +72,20 @@ const RightSideBar = () => {
           ดูทั้งหมด (0) {open ? <ArrowDropUp /> : <ArrowDropDown />}
         </button>
         <div className={open ? `flex flex-col mt-4 gap-4` : `hidden`}>
-          <div className="flex flex-row gap-3">
-            <Image
-              width={32}
-              height={32}
-              src="/profilepic.jpg"
-              alt="profilepic"
-              layout="fixed"
-              className="rounded-full"
-            />
-            <pre>Natthaphol Uthumphirat</pre>
-          </div>
-          <div className="flex flex-row gap-3">
-            <Image
-              width={32}
-              height={32}
-              src="/profilepic.jpg"
-              alt="profilepic"
-              layout="fixed"
-              className="rounded-full"
-            />
-            <pre>Natthaphol Uthumphirat</pre>
-          </div>
+          {ContactList.map((contact, index) => (
+            <div className="flex flex-row gap-3">
+              <Image
+                key={index}
+                width={32}
+                height={32}
+                src={contact.img}
+                alt="profilepic"
+                layout="fixed"
+                className="rounded-full"
+              />
+              <p>{contact.name}</p>
+            </div>
+          ))}
         </div>
       </List>
     </div>
