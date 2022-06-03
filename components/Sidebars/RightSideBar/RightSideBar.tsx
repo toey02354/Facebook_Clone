@@ -1,15 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import {
-  Divider,
-  List,
-  ListSubheader,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  Menu,
-  MenuItem,
-} from "@mui/material";
+import { Divider, List, ListSubheader, Button } from "@mui/material";
 import {
   CardGiftcardOutlined,
   VideoCall,
@@ -22,8 +13,8 @@ import {
 import ContactList from "./ContactList";
 
 const RightSideBar = () => {
-  const [open, setOpen] = React.useState<boolean>(false);
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const [open, setOpen] = useState<boolean>(false);
+  const handleClick = () => {
     setOpen((curr) => !curr);
   };
 
@@ -65,12 +56,12 @@ const RightSideBar = () => {
           </ListSubheader>
         }
       >
-        <button
-          className="w-full flex justify-center bg-[#252627] p-2 rounded-2xl"
+        <Button
+          className="w-full flex justify-center bg-[#252627] p-2 rounded-2xl text-white"
           onClick={handleClick}
         >
           ดูทั้งหมด (0) {open ? <ArrowDropUp /> : <ArrowDropDown />}
-        </button>
+        </Button>
         <div className={open ? `flex flex-col mt-4 gap-4` : `hidden`}>
           {ContactList.map((contact, index) => (
             <div className="flex flex-row gap-3">
